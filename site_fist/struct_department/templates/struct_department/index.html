@@ -1,0 +1,81 @@
+{% extends 'struct_department/base.html' %}
+
+{% block content %}
+<main class="flex-shrink-0">
+    <div class="container">
+        <h1> Структура факультета информационных систем и технологий</h1>
+        <p class="lead">Мы готовим специалистов, способных решать сложные задачи с использованием
+            системных знаний в ИТ и инженерии. Мы учим определять цели, основанные на ценностях в бизнесе, а также
+            создавать ИТ-решения для достижения этих целей.</p>
+
+
+        <table class="table">
+
+            <!-- Кафедры -->
+            <thead class="table-info">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Кафедры</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for d in department %}
+            <tr>
+                <th scope="row">{{forloop.counter}}</th>
+                <td>{{d.name}}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+
+            <!-- Типы направления подготовки -->
+            <thead class="table-info">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Типы направления подготовки</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for t in type %}
+            <tr>
+                <th scope="row">{{forloop.counter}}</th>
+                <td>{{t.name}}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+
+            <!-- Направления подготовки -->
+            <thead class="table-info">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Направления подготовки</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for p in programs %}
+            <tr>
+                <th scope="row">{{forloop.counter}}</th>
+                <td>{{p.name}}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+
+            <!-- Дисциплины -->
+            <thead class="table-info">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Дисциплины</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for dis in disciplines %}
+            <tr>
+                <th scope="row">{{forloop.counter}}</th>
+                <td>{{dis.name}}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+</main>
+
+{% endblock %}
