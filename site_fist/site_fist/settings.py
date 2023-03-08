@@ -6,6 +6,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 DEBUG = False
 
+# Be sure to add a key
+# SECRET_KEY = ''
 ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
