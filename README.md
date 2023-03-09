@@ -43,3 +43,4 @@
 		lectures_hrs_num, 
 		practice_hrs_num, 
 		total_hrs_num)
+![home](https://github.com/legion088/struct-department/blob/main/desc/struct.png)
